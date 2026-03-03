@@ -1,4 +1,5 @@
 ---
+import '@fontsource-variable/inter';
 import "../styles/global.css";
 ---
 
@@ -8,20 +9,19 @@ import "../styles/global.css";
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>InfoJobs</title>
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
 
-<style>
+<style is:global>
 	html,
 	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
+		background: #10182A;
+		color: white;
+		font-family: 'Inter Variable', sans-serif;
 	}
 </style>
