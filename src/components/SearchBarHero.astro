@@ -1,0 +1,72 @@
+---
+const cities = [
+  "Bogotá",
+  "Medellín",
+  "Cali",
+  "Barranquilla",
+  "Cartagena",
+  "Cúcuta",
+  "Bucaramanga",
+  "Pereira",
+  "Santa Marta",
+  "Ibagué",
+  "Manizales",
+  "Villavicencio",
+  "Pasto",
+  "Montería",
+  "Neiva",
+  "Armenia",
+  "Valledupar",
+  "Sincelejo",
+  "Popayán",
+  "Tunja",
+  "Riohacha",
+  "Quibdó",
+  "Yopal",
+  "Leticia",
+  "Florencia",
+  "San Andrés",
+];
+---
+
+<form class="placeholder:text-[#64748B] placeholder:text-sm">
+  <div>
+    <input type="search" placeholder="Job title, keywords, or stack..." />
+  </div>
+
+  <div>
+    <input
+      type="text"
+      id="citiesInput"
+      list="cities"
+      placeholder="City or remote"
+    />
+    <datalist id="cities">
+      {cities.map((city) => <option value={city} />)}
+    </datalist>
+  </div>
+
+  <div>
+    <label id="labelCheckbox">Remote</label>
+    <input id="checkboxchangued" type="checkbox" />
+  </div>
+
+  <input type="submit" />
+</form>
+
+<script>
+  const checkbox = document.getElementById("checkboxchangued");
+  const citiesInput = document.getElementById("citiesInput");
+
+  if (
+    checkbox instanceof HTMLInputElement &&
+    citiesInput instanceof HTMLInputElement
+  ) {
+    const syncCitiesInputState = () => {
+      citiesInput.disabled = checkbox.checked;
+    };
+
+    checkbox.addEventListener("change", syncCitiesInputState);
+    syncCitiesInputState();
+  }
+</script>

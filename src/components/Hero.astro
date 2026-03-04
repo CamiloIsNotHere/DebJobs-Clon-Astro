@@ -1,0 +1,42 @@
+---
+import SearchBarHero from "./SearchBarHero.astro";
+---
+
+<section class="mx-auto max-w-7xl px 4 w-full border-b-2 border-[#1D263A]">
+  <div class="flex flex-col items-center text-center py-37.25">
+    <div
+      class="inline-flex items-center gap-3 bg-[#101F3F] rounded-full border-2 border-[#1d3a7a] text-[#135BEC] px-4 py-1"
+    >
+      <span class="relative flex size-3">
+        <span
+          class="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#135BEC] opacity-75"
+        ></span>
+        <span class="relative inline-flex size-3 rounded-full bg-[#135BEC]"
+        ></span>
+      </span>
+
+      <span class="font-bold">2,400+ NEW JOBS THIS WEEK</span>
+    </div>
+
+    <h1 class="text-7xl font-black tracking-tight">
+      Find your next<span
+        class="bg-linear-to-r from-[#135BEC] to-[#00F2FF] bg-clip-text text-transparent"
+        >dev</span
+      >
+      <span
+        class="block bg-linear-to-r from-[#135BEC] to-[#00F2FF] bg-clip-text text-transparent"
+      >
+        role
+      </span>
+    </h1>
+
+    <p class="text-[#94A3B8] text-[20px]">
+      The world's most innovative tech companies are looking
+      <span class="block"
+        >for developers like you. Remote, hybrid, or on-site.</span
+      >
+    </p>
+
+    <SearchBarHero />
+  </div>
+</section>
