@@ -27,6 +27,9 @@ const cities = [
   "Florencia",
   "San Andrés",
 ];
+
+
+
 ---
 
 <form class="placeholder:text-[#64748B] placeholder:text-sm">
@@ -55,18 +58,6 @@ const cities = [
 </form>
 
 <script>
-  const checkbox = document.getElementById("checkboxchangued");
-  const citiesInput = document.getElementById("citiesInput");
-
-  if (
-    checkbox instanceof HTMLInputElement &&
-    citiesInput instanceof HTMLInputElement
-  ) {
-    const syncCitiesInputState = () => {
-      citiesInput.disabled = checkbox.checked;
-    };
-
-    checkbox.addEventListener("change", syncCitiesInputState);
-    syncCitiesInputState();
-  }
+    let checkbox=document.getElementById("checkboxchangued");
 </script>
+
